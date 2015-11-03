@@ -47,7 +47,10 @@ public class Udacity
 		
 		String url = null;
 		Document doc;
-		String title, startDate, fullDesc;
+		Elements currElem;
+		String title, startDate, shortDesc, fullDesc, price, crsImg, instructor;
+		ArrayList<String> instructors = new ArrayList<String>();
+		String []tmpAry;
 		int i = 0;
 		
 		for(; i < links.size(); i++)
@@ -59,23 +62,39 @@ public class Udacity
 
 			title = doc.select("h1[class=course-header-title h-slim]").text();
 			fullDesc = doc.select("div[class=pretty-format]").select("p").text();
-			//startDate = doc.select("strong[class=ng-binding]").text();
+			shortDesc = doc.select("meta[name=description]").first().attr("content");
+			
+			crsImg = doc.select("div.container.banner-content").attr("style");
+			if(!crsImg.matches(".*url\\(\\)"))
+				crsImg = crsImg.split("url\\(")[1].split("\\)")[0];
+			else
+				crsImg = "N/A";
+			
+			currElem = doc.select("div.col-xs-12.instructor-information.pull-left");
+			//split("\\9662 \\9662 ");
+			tmpAry = currElem.select("a").text().split("([^\\u9662] ){2,}");
+			for(int j = 0; j < tmpAry.length; j++)
+			{
+				if(tmpAry[j].matches(".*[a-zA-Z]+.*"))
+				{
+					//System.out.println("\tINSTRUCTOR: " + tmpAry[j]);
+					instructors.add(tmpAry[j]);
+				}
+			}
+			
+			//price = doc.select("div[class=media-body]").select("strong").text();  //SCRIPT GENERATED
+			//startDate = doc.select("strong[class=ng-binding]").text();			//SCRIPT GENERATED
+			
+			
 			System.out.println(title);
-			System.out.println("\t" + fullDesc.substring(0, 19));
-			//System.out.println("\t" + startDate);
+			System.out.println("\tDESCR:       " + fullDesc.substring(0, 19));
+			System.out.println("\tSMALLDESC:   " + shortDesc.substring(0,19));
+			System.out.println("\tIMAGE URL:   " + crsImg);
+			System.out.println("\tINSTRUCTORS: " + instructors);
+			//System.out.println("\tPRICE: " + price);								//SCRIPT GENERATED
+			//System.out.println("\t" + startDate);									//SCRIPT GENERATED
 			
 		}
-		System.out.println("\nA Total of [" + (i + 1) + "] courses");
-		/*
-		Document doc = Jsoup.connect(url).get();
-		
-		Elements ele = doc.select("div[class=col-xs-9 course-list]");
-		Elements title = ele.select("h2");
-		Elements link = ele.select("div[href]");
-		
-		System.out.println("URL: " + url);
-		//System.out.println(doc);
-		System.out.println("Current Content\nTitle: " + title + "\nLink: " + link);
-		*/
+		System.out.println("\nA Total of [" + (i + 1) + "] courses");	
 	}
 }
