@@ -4,7 +4,7 @@
 			<?php
 				try
 				{
-					$con = new PDO("mysql:host=localhost;dbname=moocs160", "root", "chelley4pig");
+					$con = new PDO("mysql:host=localhost;dbname=moocs160", "root", "xxxxxxx");
 					$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			
 					$query = "SELECT * FROM course_data as C, coursedetails as D WHERE C.id = D.course_id";
