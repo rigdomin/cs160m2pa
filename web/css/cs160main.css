@@ -1,0 +1,258 @@
+<style>
+	#nothing{}
+	#pagewrapper
+	{
+		width: 90%;
+		max-width: 1200px;
+		margin: auto;
+		padding: 0;
+		text-align: left;
+		clear: both;
+	}
+	#container
+	{
+		width: 100%;
+		clear: both;
+		padding: 10px;
+		text-align: center;
+	} 
+	#container:nth-child(odd)
+	{
+    	background-color: #DBEDFB;
+	}
+	#container:nth-child(even)
+	{
+	    background-color: white;
+	}
+	/*--------------------------HEADER-----------------------------*/
+	header, footer
+	{
+		background-color: #161E6E;
+		color: white;
+		padding: 10px 10px 0 10px;
+		margin: 0;
+		width: 100%;
+		float: left;
+		clear: both;
+	}
+	a
+	{
+		text-decoration: none;
+		color: white;
+		margin: 0;
+		padding: 0;
+	}
+	header h1
+	{
+		float: left;
+	}
+	header p
+	{
+		float: right;
+		vertical-align: top;
+		padding: 0;
+		margin: 0;
+	}
+	header a:hover, footer a:hover
+	{
+		color: #60BAFF;
+	}
+	header li
+	{
+		border: 1px solid;
+		border-bottom-width: 0;
+		border-radius: 5px 5px 0 0;
+		margin: 0;
+	}
+	nav
+	{
+		float: left;
+		clear: left;
+		padding: 0;
+		margin: 0;
+	}
+	#nav_tab
+	{
+		display: inline-block;
+		border: solid;
+		border-width: 1px 1px 0 1px;
+		border-radius: 3px 3px 0 0;
+		margin: 0;
+		padding: 0 8px;
+		background-color: #404997;
+		vertical-align: bottom;
+	}
+	#nav_tab:hover
+	{
+		color: #161E6E;
+		background-color: white;
+		font-weight: bold;
+	}
+	#search_container
+	{
+		padding: 0;
+		margin: 5px;
+		float: right;
+		clear: both;
+		vertical-align: top;
+	}
+	#search_bar
+	{
+		float: left;
+		margin: 0;
+		border: 0;
+		vertical-align: top;
+	}
+	#search_bar input[type=text]
+	{
+		background-color: white;
+		border-radius: 5px 0 0 5px;
+		padding: 5px;
+		margin: 0;
+		border: 0;
+		font-size: 14pt;
+		color: #161E6E;
+	}
+	#search_button
+	{
+		border: 1px solid;
+		border-radius: 0 5px 5px 0;
+		padding: 5px;
+		margin: 0;
+		border: 0;
+		background-color: #D65513;
+		color: white;
+		text-align: center;
+		vertical-align: middle;
+		font-weight: bold;
+		font-size: 14pt;
+	}
+	#search_button:hover
+	{
+		background-color: #404997;
+		cursor: pointer;
+	}
+	/*------------------------------FOOTER------------------------------------*/
+	#footerContent
+	{
+		border: 1px solid;
+		border-radius: 5px;
+		background-color: #404997;
+	}
+	#footerList
+	{
+		margin: 0 10px 0 0;
+		padding: 10px;
+		display: inline-block;
+		text-align: left;
+		vertical-align: top;
+	}
+	#footerList p
+	{
+		margin: 0;
+		padding: 0;
+	}
+	#footerList ul
+	{
+		list-style: none;
+		padding: 5px 5px 0 5px;
+		margin: 0;
+	}
+	#footerList li
+	{
+		font-size: 10pt;
+	}
+	/*------------------------INDEX PAGE-----------------------*/
+	#category_box
+	{
+		display: inline-block;
+		padding: 3px;
+		margin: 0 5px;
+		min-height: 100% !important;
+		width: 30%;
+		max-width: 300px;
+		background-color: #161E6E;
+		color: white;
+		text-align: center;
+		vertical-align: top;
+	}
+	#category_box img
+	{
+		padding: 1px;
+		margin-bottom: 5px;
+		width: 90%;
+		max-width: 200px;
+		max-height: 200px;
+	}
+	#category_box h3
+	{
+		padding: 0;
+		margin: 0;
+		max-height: 20%;
+	}
+	#category_box p
+	{
+		padding: 0;
+		margin: 0;
+		max-height: 20%;
+		font-size: 11pt;
+		color: white;
+		font-style: italic;
+	}
+	/*---------------------AGGREGATE RESULTS---------------------*/
+	table
+	{
+		overflow: scroll;
+		width: 100%;
+	}
+	table img
+	{
+		width: 50px;
+		height: 50px;
+	}
+	#course_container
+	{
+		overflow: scroll;
+		padding: 5px;
+		margin: 10px 0;
+		background-color: #969798;
+	}
+	#course_container h2
+	{
+
+	}
+	#course_container img
+	{
+		float: left;
+		height: 100%;
+		width: 80px;
+		height: 80px;
+	}
+	#course_info
+	{
+		font-size: 12pt;
+		font-weight: bold;
+	}
+	#course_description
+	{
+		font-size: 11pt;
+	}
+	/*------------------------ADDITIONAL-----------------------*/
+	#logo
+	{
+		background-color: #161E6E;
+		margin: 0px;
+		text-align: left;
+		float: left;
+	}
+	#logo img
+	{
+		max-width: 150px;
+	}
+	#copyright
+	{
+		text-align: center;
+		font-size: 10px;
+		font-style: italic;
+	}
+</style>
