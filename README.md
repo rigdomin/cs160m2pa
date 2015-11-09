@@ -1,2 +1,2 @@
 # cs160m2pa
-root folder for all Mileston 2 Part A java files
+root folder for all Milestone 2 Part A java files
